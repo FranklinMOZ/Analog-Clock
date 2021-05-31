@@ -1,12 +1,12 @@
 # Analog-Clock
-# This creates a window where the clock will be displayed
+### This creates a window where the clock will be displayed
 import tkinter as ui
 import time
 import math
 
 window = ui.Tk()
 window.geometry("1129x1122")
-# The lines below tell the clock what time it is, the position of the hands, and rotation.
+### The lines below tell the clock what time it is, the position of the hands, and rotation.
 def update_clock():
     hours = int(time.strftime("%I"))
     minutes = int(time.strftime("%M"))
@@ -29,11 +29,11 @@ def update_clock():
 canvas = ui.Canvas(window, width=1129, height=1122)
 canvas.pack(expand=True, fill='both')
 
-# This is the background or the numbers
+### This is the background or the numbers
 bg = ui.PhotoImage(file='Clock - nohands.gray.PNG')
 canvas.create_image(560, 550, image=bg)
 
-# Below are the hands of the clock, the center position of all the hands, measurements of each hand.
+### Below are the hands of the clock, the center position of all the hands, measurements of each hand.
 center_x = 560
 center_y = 550
 seconds_hand_len = 300
